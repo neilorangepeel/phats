@@ -1,20 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+	<!--
+		Why not view the source on Github?
+		https://github.com/neilorangepeel/Phats
+	-->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Phats - My physical activity stats</title>
 
 	<!-- All styles -->
-	<style></style>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	html, body {
+		height: 100%;
+	}
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-family: brandon grotesque, -apple-system, sans-serif;
+		font-weight: 600;
+		text-align: center;
+		line-height: 1;
+	}
+	.stats {
+		border:1px solid pink;
+		position: relative;
+		font-size: 40vmin;
+	}
+	.cycling,
+	.running,
+	.measure {
+		mix-blend-mode: multiply;
+	}
+	.cycling {
+		color: red;
+	}
+	.running {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		color: blue;
+	}
+	</style>
 
 	<!-- All scripts -->
 	<script type="text/javascript">
-		
+
 	</script>
 </head>
 <body>
+
+	<div class="stats">
+		<div class="cycling">8965</div>
+		<div class="running">421</div>
+	</div>
 
 </body>
 </html>
