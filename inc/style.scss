@@ -23,7 +23,7 @@ svg {
 	width: 8vmin;
 }
 .stats {
-	position: absolute;
+	position: relative;
 	font-size: 35vmin;
 }
 @media (max-width: 900px) {
@@ -57,8 +57,13 @@ svg {
 	color: #04F;
 }
 .reveal {
-	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 }
 .reveal a {
