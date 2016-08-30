@@ -16,15 +16,15 @@
 	<link rel="stylesheet" href="style.css">
 
 	<!-- All scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://use.typekit.net/nhq6pqm.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-	
 </head>
 <body>
 
 	<div class="stats">
-		<div class="stats-cycling">8965</div>
-		<div class="stats-running">421</div>
+		<div class="stats-cycling"><span class="count">545</span></div>
+		<div class="stats-running"><span class="count">223</span></div>
 		<div class="stats-measure">Kilometers</div>
 	</div>
 
@@ -43,5 +43,18 @@
 		</a>
 	</div>
 
+	<script>
+		$('.count').each(function () {
+		    $(this).prop('Counter',0).animate({
+		        Counter: $(this).text()
+		    }, {
+		        duration: 1000,
+		        easing: 'swing',
+		        step: function (now) {
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
+		});
+	</script>
 </body>
 </html>
